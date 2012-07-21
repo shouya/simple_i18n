@@ -12,7 +12,7 @@ module SimpleI18n
   
   
   Kernel.class_eval do
-    def tr do
+    def tr
       return Language.current
     end
     
@@ -26,7 +26,7 @@ module SimpleI18n
 
     def current_language(option={})
       return option[:full_name] ?
-      Language.current.full_name :
+        Language.current.full_name :
         Language.current.abbreviation
     end
   end
