@@ -8,7 +8,8 @@ Gem::Specification.new do |gem|
   gem.description   = 'A simple internationalization library for' \
                       'easily creating multilanguage ruby program'
   gem.summary       = gem.description
-  gem.homepage      = "" # TODO
+
+  gem.homepage      = "https://github.com/shouya/simple_i18n" # TODO
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
