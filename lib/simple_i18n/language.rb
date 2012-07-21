@@ -5,12 +5,6 @@ module SimpleI18n
     class << self
       attr_accessor :default, :current
       attr_accessor :table
-
-      def initialize
-        @table = {}
-        @default = nil
-        @current = nil
-      end
     end
 
     attr_reader :abbreviation, :full_name
@@ -21,6 +15,7 @@ module SimpleI18n
       @abbreviation = abbr
       @full_name = full_name
 
+      self.class.table ||= {}
       self.class.default ||= self
       self.class.current ||= self
 
@@ -55,6 +50,7 @@ module SimpleI18n
       if translations.has_key?(token)
         warn 'Token [%s] redefined in language %s.' % [token, @abbreviation]
       end
+      @translations[token] = translation
     end
     
   end

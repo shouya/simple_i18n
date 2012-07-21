@@ -1,0 +1,8 @@
+# -*- ruby -*-
+
+define_language('en', 'English') do |en|
+  en['display-username'] = 'Display Username'
+  en['reset-password'] = 'Reset Password'
+  # ... others translations
+end
+

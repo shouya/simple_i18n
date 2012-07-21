@@ -21,7 +21,7 @@ module SimpleI18n
         warn 'Language %s is not defined.' % lang
         return Language.current
       end
-      Language.current = lang
+      Language.current = Language.table[lang]
     end
 
     def current_language(option={})

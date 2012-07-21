@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# -*- ruby -*-
+
+define_language('zh', '中文') do |zh|
+  zh['display-username'] = '顯示用戶名'
+  zh['reset-password'] = '重置密碼'
+end
+
+

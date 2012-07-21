@@ -1,5 +1,5 @@
 
-require './langauge'
+require_relative './language'
 
 module SimpleI18n
   module Specification
@@ -15,8 +15,10 @@ module SimpleI18n
 
     def load_language_file(filename, options = {})
       BasicObject.new.instance_eval do
-        include TranslationDefinition
-        load filename
+        class << self
+          include TranslationDefinition          
+        end
+        Kernel.eval(File.read(filename), Kernel.binding)
       end
     end
 
