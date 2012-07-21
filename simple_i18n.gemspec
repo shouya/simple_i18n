@@ -5,7 +5,7 @@ require File.expand_path('../lib/simple_i18n/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Shou Ya"]
   gem.email         = ["shouyatf@gmail.com"]
-  gem.description   = 'A simple internationalization library for' \
+  gem.description   = 'A simple internationalization library for ' \
                       'easily creating multilanguage ruby program'
   gem.summary       = gem.description
 
