@@ -25,8 +25,8 @@ Which shall contain the content like:
 
 	require 'simple_i18n'
 	
-	SimpleI18n.load_language_file('language/lang-en')
-	SimpleI18n.load_language_file('language/lang-zh')
+	SimpleI18n.load_language_file('language/en')
+	SimpleI18n.load_language_file('language/zh')
 	# ... other languages
 	SimpleI18n.set_default_language('en')
 
@@ -37,7 +37,7 @@ the language translation files, right name as form of `lang-en` as above.
 The language files should contain the translation tables. Fortunately they are
 defined in ruby also, in the form of:
 
-	# in file `lang-en`
+	# in file `en`
 	
 	define_language('en', 'English') do |en|
 	  en['display-username'] = 'Display Username'
@@ -47,7 +47,7 @@ defined in ruby also, in the form of:
 
 Different translation tables should define same tokens, for example:
 
-	# in file `lang-zh`
+	# in file `zh`
 	
 	# -*- encoding: utf-8 -*-
 	
@@ -78,6 +78,10 @@ Then you can use these in your code:
 Via refering translations with `tr` and changing current language with
 `switch_language` methods whereever you need.
 
+
+If there are places that you don't understand, you can move on the 
+demonstration project, which is located in `demo_project` directory.
+And if that doesn't help too, welcome to write to me.
 
 ## Contributing
 
